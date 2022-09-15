@@ -2,17 +2,25 @@ version: "3.0"
 
 stories:
 
-- story: happy path
+
+
+- story: happy path + form number
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
   - action: action_emotion
-  - action: action_student_info
+  - action: identification_form
+  - active_loop: identification_form
+  - slot_was_set:
+    - requested_slot: student_number
+  - slot_was_set:
+    - student_number: 3
+  - slot_was_set:
+      - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+ 
+  
+  
 
-- story: sad path 
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: action_emotion

@@ -7,7 +7,36 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+
+
+- rule: Despedidas
   steps:
-    - intent: nlu_fallback
-    - action: action_emotion
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- rule: Activate form
+  steps:
+  - action: action_emotion
+  - action: identification_form
+  - active_loop: identification_form
+
+
+# Permite desativar o form, quando todos os dados são recolhidos. 
+
+- rule: Submit form
+  condition:
+  # Condition that form is active.
+  - active_loop: identification_form
+  steps:
+  # Form is deactivated
+  - action: identification_form
+  - active_loop: null
+#  - slot_was_set:
+ #   - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: utter_submit
+
+
+ 
+ 
