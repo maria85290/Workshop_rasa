@@ -1,0 +1,12 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taS2NhYA6dwbhQ==": "utter_greet",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpbhMiAUAQvc0lw==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpeSZQMAVufn5KfGleRmJBQWVtbWxAN75UWc=": "action_emotion",
+    "eJydjlEKgCAQRK+yB+gEXiVikVpKyFXWNQjx7hn1b/Q1M/B4zFjqACUKHWhndYENlKcgW08G3rG7pMSNzYmkMY7bVAOrEGntOLIqCT7oP0PnhQ9hwcybjfH8qCIf7uy5pgtcQG6j": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpeSZQMAVufn5KSDzE4EGxQIAPEFQdQ==": "action_emotion",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpeSZQMAVufn5KSDzE4k1KDU3H0TjNykWAJZGbL8=": "action_student_info",
+    "eJytzlEKgCAMBuCreIBO4FUiRHKFkFvM2Yt495R6zoieth/+fWzMZVB5ZziMncUTapWvxaANoNUdNh8FsHZTBK4djzWKVisDSOkYSQTYXNVvQueLQOSab99CEKjNH6QoydVL43GhZ246AdgniyA=": "action_listen"
+  }
+}
