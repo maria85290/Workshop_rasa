@@ -36,7 +36,7 @@ rules:
  #   - requested_slot: null
   # The actions we want to run when the form is submitted.
   - action: utter_submit
-
+  - action: action_student_info
 
  
  

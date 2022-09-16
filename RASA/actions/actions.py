@@ -54,13 +54,21 @@ class ActionStudentInfo(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        print(tracker.slots)
+        if "student_number" in tracker.slots:
 
         ## Seleciona um número aletorio para ser o aluno.
+            print(str(tracker.slots['student_number']))
+            responses = requests.get("http://localhost:3000/students/" + str(tracker.slots['student_number'])).json()
+            print(responses)
 
-        responses = requests.get("http://localhost:3000/students/1").json()
-        print(responses)
-        dispatcher.utter_message(text="Response {}".format(responses))
-        
+            ## Avaliar situação de risco: Nota de portugues e matematica distam 2 ou mais valores 
+            #(Por exemplo: mat: 5 e port: 3)
+            print(abs(responses['5_ANO_3_PERIODO_PT'] - responses['5_ANO_3_PERIODO_MAT']))
+            if abs(responses['5_ANO_3_PERIODO_PT'] - responses['5_ANO_3_PERIODO_MAT']) >= 2:
+                dispatcher.utter_message(text="Situação de risco detetada!! As tua notas de português e matemática estão separada de pelo menos 2 valores. Atenção ao estudo! Se precisares eu posso pedir ao professor que te contacte.")
+            else:
+                 dispatcher.utter_message(text="As tuas notas mantém-se congruentes. Não se nota nenhuma discrepância relevante.")
 
         return []
 

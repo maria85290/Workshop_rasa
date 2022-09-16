@@ -4,7 +4,7 @@ stories:
 
 
 
-- story: happy path + form number
+- story: happy path 
   steps:
   - intent: greet
   - action: utter_greet
@@ -20,6 +20,8 @@ stories:
       - requested_slot: null
   - active_loop: null
   - action: utter_submit
+  - action: action_student_info
+
  
   
   
