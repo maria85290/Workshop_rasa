@@ -1,0 +1,85 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hi
+    - Ola
+    - bom dia
+    - boa tarde
+    - boa noite
+    - Vamos lá
+- intent: goodbye
+  examples: |
+    - Adeus
+    - Um bom dia
+    - chau
+    - xau
+    - Vemos nos em breve
+    - Adeus
+    - Ate logo
+    - Tem um bom dia
+    - vejo-te mais logo
+- intent: affirm
+  examples: |
+    - sim
+    - s
+    - claro
+    - isso parece-me bem
+    - correto
+- intent: deny
+  examples: |
+    - não
+    - n
+    - nunca
+    - Não me parece
+    - Eu não gosto
+    - nem pensar
+    - NÃO
+- intent: mood_great
+  examples: |
+    - perfeito
+    - fantastico
+    - maravilhoso
+    - Sinto-me como um rei
+    - Magnifico
+    - Eu sinto me muito bem
+    - eu sou magnifica
+    - eu sou linda
+    - eu sou capaz de salvar o mundo 
+    - muito bom
+    - perfeito
+    - tão perfeito
+    - tão bom
+- intent: mood_unhappy
+  examples: |
+    - o meu dia foi pessimo
+    - Eu sou triste
+    - Eu não me sinto muito bem
+    - Estou desapontada
+    - muito triste
+    - eu estou muito triste
+    - triste
+    - infeliz
+    - não bem
+    - não muito bem
+- intent: bot_challenge
+  examples: |
+    - tú es um bot?
+    - tu es  humano?
+    - Estou a falar com um bot?
+    - Estou a falar com um humano?
+- intent: request_help
+  examples: |
+    - falar com professor
+    - quero contactar professor
+    - o professor está aí?
+    - quando é que o professor pode falar comigo?
+
+- intent: thanks
+  examples: |
+    - Obrigada
+    - obrigada
+    - Fico agradecida!
+    - Fico aguardar 
+

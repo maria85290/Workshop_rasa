@@ -1,0 +1,82 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hi!
+    - Ola
+    - Bom dia!
+    - Boa tarde
+    - Boa noite
+    - Vamos lá
+    - estas aí?
+
+- intent: goodbye
+  examples: |
+    - Adeus
+    - Até logo
+    - chau
+    - Tem um bom dia
+    - Voltamos ao contacto logo!
+    - Obrigada pela ajuda.
+
+
+- intent: mood_great
+  examples: |
+    - Perfeito
+    - otimo
+    - bem
+    - fantastico
+    - Sinto me muito bem
+    - Maravilhoso
+    - Estou me a sentir mesmo muito bem
+    - Eu estou bem
+    - Eu estou fasntasticos
+    - Eu sinto que vou salvar o mundo
+    - Extremamente bem
+    - muito bem
+    - perfeito
+
+- intent: mood_unhappy
+  examples: |
+    - O meu dia esta pessimo
+    - estou trsite
+    - Não me sinto bem
+    - Estou desapontado
+    - muito trsite
+    - eu estou super trsite
+    - triste
+    - muito triste
+    - infeliz
+    - não estou bem
+    - não muito bem
+    - muito triste
+    - tão trsite
+
+- intent: bot_challenge
+  examples: |
+    - Tú es um bot?
+    - Tú es humano?
+    - Eu estou a falar para um bot?
+    - Eu estou a falar para um humano?
+
+- intent: request_number
+  examples: |
+    - Queres saber o meu número de aluno?
+    - Sabes o meu numero?
+
+
+- intent: ask_help
+  examples: |
+    - Preciso de ajuda
+    - Tenho dúvidas nos trabalhos de casa de matemática. Podias ajudar-me?
+    - Podias ajudar-me a estudar?
+    - não sei resolver este exercicio
+    - tenho teste amanha, e não sei o que estudar!
+
+- intent: thanks
+  examples: |
+     - Obrigada. :) 
+     - OBG
+     - obg pela ajuda
+     - obrigada

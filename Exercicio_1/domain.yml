@@ -1,0 +1,69 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - mood_unhappy
+  - mood_great
+  - bot_challenge
+  - request_number
+  - ask_help
+  - thanks
+
+
+
+forms:
+  identification_form:
+    required_slots:
+        - student_number
+
+slots:
+  student_number:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: identification_form
+        requested_slot: student_number
+
+responses:
+  utter_contact_prof:
+  - text: "Vou pedir ao professor que entre em contacto contigo. É a pessoa mais indicada para te ajudar!"
+  utter_greet:
+  - text: "Olá! Bem vindo :) Como te sentes?"
+  utter_greet_request_number:
+  - text: "Olá! Bem vindo. Qual é o teu numero de aluno?"
+  utter_goodbye:
+  - text: "Até logo!"
+  utter_asks_emotional_state:
+  - text: "Como estás?"
+  utter_ask_student_number:
+  - text: "Para te conseguir ajudar preciso que me digas o teu número de aluno. "
+  utter_help:
+  - text: "Precisas de falar com algum professor? Eu posso perdir que entrem em contacto contigo ..."
+  utter_iamabot:
+  - text: "Eu sou bot, powered by Rasa."
+  utter_slots_values:
+  - text: Vou me lembrar que o teu número  de aluno é {student_number}!
+  utter_submit:
+  - text: "Recebido!!"
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+
+
+actions :
+- action_emotion
+- action_student_info
+- validate_identification_form
+- utter_submit
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

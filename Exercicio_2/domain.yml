@@ -1,0 +1,71 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- greet
+- deny
+- request_help
+- goodbye
+- affirm
+- mood_great
+- mood_unhappy
+- bot_challenge
+- thanks
+
+forms:
+  data_form:
+    required_slots:
+      - prof_name
+      - email
+
+slots:
+  prof_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: data_form
+           requested_slot: prof_name
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: data_form
+           requested_slot: email
+
+responses:
+  utter_greet:
+  - text: Ola! Em que posso ajudar?
+  utter_cheer_up:
+  - text: 'Isto vai te animar:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Ajudou?
+  utter_happy:
+  - text: Fantastico!
+  utter_bye:
+  - text: Adeus!
+  utter_goodbye:
+  - text: Adeus!
+  utter_iamabot:
+  - text: Eu não sou um bot, powered by Rasa.
+  utter_ask_prof_name:
+  - text: Que professor quer contactar?
+  utter_ask_email:
+  - text: Qual é o seu email? 
+  utter_submit:
+  - text: O teu pedido foi enviado ao docente.  
+  utter_slots_values:
+  - text: O professor {prof_name} vai entrar em contacto através do email {email}!
+
+actions:
+- utter_greet
+- utter_slots_values
+- utter_submit
+#- validate_data_form
+- utter_bye
