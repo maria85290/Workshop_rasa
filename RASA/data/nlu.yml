@@ -64,3 +64,19 @@ nlu:
   examples: |
     - Queres saber o meu número de aluno?
     - Sabes o meu numero?
+
+
+- intent: ask_help
+  examples: |
+    - Preciso de ajuda
+    - Tenho dúvidas nos trabalhos de casa de matemática. Podias ajudar-me?
+    - Podias ajudar-me a estudar?
+    - não sei resolver este exercicio
+    - tenho teste amanha, e não sei o que estudar!
+
+- intent: thanks
+  examples: |
+     - Obrigada. :) 
+     - OBG
+     - obg pela ajuda
+     - obrigada

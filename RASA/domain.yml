@@ -7,6 +7,8 @@ intents:
   - mood_great
   - bot_challenge
   - request_number
+  - ask_help
+  - thanks
 
 
 
@@ -26,6 +28,8 @@ slots:
         requested_slot: student_number
 
 responses:
+  utter_contact_prof:
+  - text: "Vou pedir ao professor que entre em contacto contigo. É a pessoa mais indicada para te ajudar!"
   utter_greet:
   - text: "Olá! Bem vindo :) Como te sentes?"
   utter_greet_request_number:
@@ -35,7 +39,7 @@ responses:
   utter_asks_emotional_state:
   - text: "Como estás?"
   utter_ask_student_number:
-  - text: "Para te conseguir ajudar preciso que me digas o teu número de aluno"
+  - text: "Para te conseguir ajudar preciso que me digas o teu número de aluno. "
   utter_help:
   - text: "Precisas de falar com algum professor? Eu posso perdir que entrem em contacto contigo ..."
   utter_iamabot:

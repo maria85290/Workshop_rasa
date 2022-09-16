@@ -16,6 +16,15 @@ from nrclex import NRCLex
 #
 from rasa_sdk import Tracker, FormValidationAction
 from rasa_sdk.types import DomainDict
+from deep_translator import GoogleTranslator
+
+def translate (sentence):
+    
+    to_translate = sentence
+    translated = GoogleTranslator(source='auto', target='en').translate(to_translate)
+    return translated
+# outpout -> Ich möchte diesen Text übersetzen
+
 #
 class ActionEmotion(Action):
 #
@@ -28,11 +37,15 @@ class ActionEmotion(Action):
          
          ## Vai buscar a ultima mensagem do utilizador;
          text = str (tracker.latest_message["text"])
-
-         emotion = NRCLex (text)
+        
+         translated = translate (text)
+        
+         emotion = NRCLex (translated)
          print(emotion.affect_frequencies)
          pos  = emotion.affect_frequencies['positive']
          neg = emotion.affect_frequencies['negative']
+
+         
         
          if pos>=neg:
             dispatcher.utter_message(text="Fico feliz por estares a sentir-te bem!! Pareces muito positivo!!")
