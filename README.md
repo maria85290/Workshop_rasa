@@ -1,8 +1,5 @@
 # Workshop_rasa
 
-Projeto Hello
-19 Setembro 2022
-
 
 ## Exercicio 1:
 Crie um chatbot que permita ao aluno verificar situações de risco (ex: as notas encontram-se separadas por mais do que dois valores):
@@ -40,3 +37,6 @@ Crie um chatbot que ajude os aluno a preencher um formulário para contacto com 
 
 >rasa train
 >rasa shell
+
+
+@uminho, Projeto Hello - 19 Setembro 2022
