@@ -6,26 +6,26 @@ Projeto Hello
 
 ## Exercicio 1:
 Crie um chatbot que permita ao aluno verificar situações de risco (ex: as notas encontram-se separadas por mais do que dois valores):
-    1) Realizar ações básicas;
-    2) Conectar-se com o módulo de Education Intelligence;
-    3) Conectar-se com módulos externos (código python): Análise de sentimentos;
-    4) Conectar-se a API cliente (simulador e-schooling);
+        1) Realizar ações básicas;
+        2) Conectar-se com o módulo de Education Intelligence;
+        3) Conectar-se com módulos externos (código python): Análise de sentimentos;
+        4) Conectar-se a API cliente (simulador e-schooling);
         
 
 #### Actions server
-rasa run actions
+>rasa run actions
 
 
 #### Rasa 
-rasa run --enable-api --cors="*" 
+>rasa run --enable-api --cors="*" 
 
 
 #### Servidor cliente (simulador E-schooling)
-1) python -m http.server 
-2) Aceder ao file bot.html
+> python -m http.server 
+Aceder ao file bot.html
 
 #### Simulador Education Intelligence (servidor json-server)
-npx json-server --watch notas.json
+>npx json-server --watch notas.json
 
 
 ## Exercicio 2:
