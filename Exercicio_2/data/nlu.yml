@@ -1,4 +1,6 @@
 version: "2.0"
+
+
 nlu:
 - intent: greet
   examples: |
@@ -15,7 +17,7 @@ nlu:
     - Um bom dia
     - chau
     - xau
-    - Vemos nos em breve
+    - Vemos-nos em breve
     - Adeus
     - Ate logo
     - Tem um bom dia

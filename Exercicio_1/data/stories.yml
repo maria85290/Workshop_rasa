@@ -9,6 +9,7 @@ stories:
   - action: utter_greet
   - intent: mood_unhappy
   - action: action_emotion
+  - intent: consultar_situaçao
   - action: identification_form
   - active_loop: identification_form
   - slot_was_set:
@@ -30,6 +31,7 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: action_emotion
+  - intent: consultar_situaçao
   - action: identification_form
   - active_loop: identification_form
   - slot_was_set:

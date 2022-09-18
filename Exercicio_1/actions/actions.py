@@ -48,9 +48,9 @@ class ActionEmotion(Action):
          
         
          if pos>=neg:
-            dispatcher.utter_message(text="Fico feliz por estares a sentir-te bem!! Pareces muito positivo!!")
+            dispatcher.utter_message(text="[sentiment = positive] Fico feliz por estares a sentir-te bem!!! Em que te posso ajudar?")
          else:
-            dispatcher.utter_message(text="Parece-me que hoje estas bastante negativo! Acredita, o dia ainda vai melhorar!!")
+            dispatcher.utter_message(text="[sentiment = negative] Estas muito triste! Em que te posso ajudar?")
          
          return []
 
@@ -58,7 +58,7 @@ class ActionStudentInfo(Action):
 
     '''
     Esta ação na resposta deve confirma a recepção dos número de aluno. 
-    Tipo: "Recebido. Parece-me que este periodo as tuas notas estão bastantes melhores. Estas de parabéns!!"
+    Tipo: "Recebido. Parece-me que este periodo as tuas notas estão bastantes melhores. Parabéns!!"
     '''
 
     def name(self) -> Text:
@@ -81,13 +81,13 @@ class ActionStudentInfo(Action):
             if abs(responses['5_ANO_3_PERIODO_PT'] - responses['5_ANO_3_PERIODO_MAT']) >= 2:
                 dispatcher.utter_message(text="Atenção ao estudo! Se precisares posso pedir ao professor que te contacte.")
             else:
-                 dispatcher.utter_message(text="Parabéns!! As tuas notas no semestre passado foram exelentes.")
+                 dispatcher.utter_message(text="Parabéns!! As tuas notas são exelentes.")
         return []
 
 
 def verify_number(number):
     f = False
-    if int(number) > 0 and int(number) < 200:
+    if int(number) >= 0 and int(number) < 200:
         f = True
     return f
 

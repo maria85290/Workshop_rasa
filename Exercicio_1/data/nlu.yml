@@ -80,3 +80,9 @@ nlu:
      - OBG
      - obg pela ajuda
      - obrigada
+
+- intent: consultar_situaçao
+  examples: |
+    - Como esta a minha situação escolar?
+    - As minhas notas demonstram alguma situação de risco?
+    - Achas que devo ter algum cuidado com alguma das disciplinas?

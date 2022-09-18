@@ -14,6 +14,7 @@ intents:
 - bot_challenge
 - thanks
 
+
 forms:
   data_form:
     required_slots:
@@ -41,6 +42,11 @@ slots:
 responses:
   utter_greet:
   - text: Ola! Em que posso ajudar?
+  utter_submit:
+  - text: O teu pedido foi enviado ao docente.  
+  utter_slots_values:
+  - text: O professor {prof_name} vai entrar em contacto através do email {email}!
+
   utter_cheer_up:
   - text: 'Isto vai te animar:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -58,11 +64,6 @@ responses:
   - text: Que professor quer contactar?
   utter_ask_email:
   - text: Qual é o seu email? 
-  utter_submit:
-  - text: O teu pedido foi enviado ao docente.  
-  utter_slots_values:
-  - text: O professor {prof_name} vai entrar em contacto através do email {email}!
-
 actions:
 - utter_greet
 - utter_slots_values

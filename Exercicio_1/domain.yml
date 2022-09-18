@@ -9,6 +9,7 @@ intents:
   - request_number
   - ask_help
   - thanks
+  - consultar_situaçao
 
 
 
@@ -39,7 +40,7 @@ responses:
   utter_asks_emotional_state:
   - text: "Como estás?"
   utter_ask_student_number:
-  - text: "Para te conseguir ajudar preciso que me digas o teu número de aluno. "
+  - text: "Qual é o teu número de aluno?"
   utter_help:
   - text: "Precisas de falar com algum professor? Eu posso perdir que entrem em contacto contigo ..."
   utter_iamabot:

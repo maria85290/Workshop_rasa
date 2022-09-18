@@ -20,7 +20,7 @@ rules:
 
 - rule: Activate form
   steps:
-  - action: action_emotion
+  - intent: consultar_situaçao
   - action: identification_form
   - active_loop: identification_form
 
